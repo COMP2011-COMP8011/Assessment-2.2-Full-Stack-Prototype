@@ -1,0 +1,15 @@
+{
+  "name": "TaskParty (MERN)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [5173, 4000],
+  "portsAttributes": {
+    "5173": { "label": "TaskParty web (Vite)", "onAutoForward": "openBrowser" },
+    "4000": { "label": "TaskParty API — set visibility to Public", "onAutoForward": "notify" }
+  },
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["mongodb.mongodb-vscode"]
+    }
+  }
+}

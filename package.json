@@ -1,0 +1,25 @@
+{
+  "name": "projectgroup18-taskparty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TaskParty — COMP 8011 Group 18 full-stack MERN submission (Assessment 2.2)",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently --names api,web --prefix-colors cyan,magenta --kill-others-on-fail \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run dev --workspace backend",
+    "dev:web": "npm run dev --workspace frontend",
+    "seed": "npm run seed --workspace backend",
+    "seed:reset": "npm run seed:reset --workspace backend",
+    "test": "npm test --workspaces --if-present",
+    "build": "npm run build --workspace frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

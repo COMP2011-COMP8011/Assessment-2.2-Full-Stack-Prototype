@@ -1,0 +1,14 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Secrets — only the .env.example files are shared
+.env
+.env.*
+!.env.example
+
+# Logs and OS files
+*.log
+npm-debug.log*
+.DS_Store
+coverage/
